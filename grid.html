@@ -1,0 +1,104 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>lesson11grids</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            h1, h2 {
+                margin: 0;
+                color: white;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-weight: normal;
+                width: 100%;
+                text-align: center;
+            }
+            body {
+                margin: 0;
+                width: 100%;
+                height: 100vh;
+
+                /* 1 шаг */
+                display: grid;
+
+                /* 2 шаг */
+                grid-template-rows: 10% 50% 30% 10%;
+                grid-template-columns: 20% 4fr 1fr 2fr 20%;
+
+                /* 4 шаг */
+                grid-template-areas:
+                    "header header header header header"
+                    ". main main sidebar ."
+                    ". section1 section2 section2 ."
+                    "footer footer footer footer footer"
+                ;
+                
+                /* 3 шаг */
+            }
+            .header {
+                background-color: #107ef8;
+                grid-area: header;
+            }
+            .main-content {
+                background-color: #36a300;
+                grid-area: main;
+            }
+            .sidebar {
+                background-color: #9674d8;
+                grid-area: sidebar;
+            }
+            .section1 {
+                background-color: #ef5c01;
+                grid-area: section1;
+            }
+            .section2 {
+                background-color: #ef5c01;
+                grid-area: section2;
+            }
+            .footer {
+                background-color: #001da9;
+                grid-area: footer;
+            }
+                
+
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Header</h1>
+        </div>
+        <div class="main-content">
+            <h2>Main content</h2>
+            <div class="content"></div>
+            <div class="content"></div>
+            <div class="content"></div>
+        </div>
+        <div class="sidebar">
+            <h2>Sidebar</h2>
+        </div>
+        <div class="section1">
+            <div class="article">
+                <h2>Article</h2>
+            </div>
+            <div class="article">
+                <h2>Article</h2>
+            </div>
+        </div>
+        <div class="section2">
+            <div class="article">
+                <h2>Article</h2>
+            </div>
+            <div class="article">
+                <h2>Article</h2>
+            </div>
+        </div>
+        <div class="footer">
+            <h2>Footer</h2>
+        </div>
+
+    </body>
+    </html>
